@@ -1,4 +1,5 @@
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 export default function HomePage() {
   return (
@@ -10,6 +11,7 @@ export default function HomePage() {
         <p>Here you can add more information about your application.</p>
         <p>Feel free to customize this page as needed.</p>
       </div>
+      <Footer />
     </div>
   );
 }

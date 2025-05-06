@@ -12,7 +12,7 @@ export default function Navbar() {
     <nav className='navbar'>
         <div className='container'>
             <div className='navbar-content'>
-                <Link href="/" className="logo">LoopCart</Link>
+                <Link href="/" className="logo">NextMart</Link>
                 
                 <div className='nav-links'>
                     <Link href="../HomePage" className='nav-link'>Home</Link>

@@ -1,0 +1,48 @@
+.products-hero {
+    background: linear-gradient(to right, #1a202c, #2d3748); 
+    color: white;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    text-align: center;
+  }
+  
+  .title-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  .title-title {
+    font-size: 2.25rem; 
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  .title-description {
+    font-size: 1.125rem; 
+    margin-bottom: 2rem;
+    max-width: 42rem;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0.9;
+}
+
+.product-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 5%;
+    margin-top: 5%;
+    margin-left: 5%;
+}
+
+.product-grid{
+    /* height: 60%;
+    width: 60%; */
+    border: 2px solid black;
+}
+
+.product-image{
+    width: 20vw;
+    height: 30vh;
+}

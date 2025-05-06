@@ -1,3 +1,48 @@
-.contact-page{
-    background-color: cadetblue;
-}
+.contact-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Full viewport height */
+
+  }
+  
+  .contact-page {
+    flex: 1; /* Take the remaining space after Navbar */
+
+  }
+  
+  .contact-section {
+    background: linear-gradient(to right, #1a202c, #2d3748);
+    color: white;
+    padding: 80px 0;
+    text-align: center;
+
+  }
+  
+  .contact-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1rem;
+
+  }
+  
+  .heading {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  @media (min-width: 768px) {
+    .heading {
+      font-size: 3rem;
+    }
+  }
+  
+  .description {
+    font-size: 1.125rem;
+    margin-bottom: 2rem;
+    max-width: 32rem;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0.9;
+  }
+  
