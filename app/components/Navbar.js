@@ -12,6 +12,11 @@ export default function Navbar() {
     <nav className='navbar'>
         <div className='container'>
             <div className='navbar-content'>
+
+                <button className="mobile-menu-button" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+                    {isMenuOpen ? <FaTimes className="icon"/> : <FaBars className="icon" />}
+                </button>
+
                 <Link href="/" className="logo">NextMart</Link>
                 
                 <div className='nav-links'>
@@ -23,18 +28,11 @@ export default function Navbar() {
                 </div>
                 <div className="actions">
                     <Link href="../ProductPage" className='nav-link'>
-                    <button className="icon-button">
-
-                            <FaShoppingCart className="icon"/>
-                            <p className='text'>Shop Now</p>
-
-                    </button>
+                        <button className="icon-button">
+                            <FaShoppingCart className="icon" />
+                            <p className="text">Shop Now</p>
+                        </button>
                     </Link>
-
-                    {/* Mobile menu button */}
-                    <button className="mobile-menu-button" onClick={() => setIsMenuOpen(!isMenuOpen)}>
-                        {isMenuOpen ? <FaTimes className="icon"/> : <FaBars className="icon" />}
-                    </button>
                 </div>
 
             </div>
@@ -43,16 +41,16 @@ export default function Navbar() {
             {/* Mobile Navigation */}
             {isMenuOpen && (
                 <div className={`mobile-menu ${isMenuOpen ? 'open' : ''}`}>
-                    <Link href="/" className="mobile-link" onClick={() => setIsMenuOpen(false)}>
+                    <Link href="../HomePage" className="mobile-link" onClick={() => setIsMenuOpen(false)}>
                     Home
                     </Link>
-                    <Link href="/" className="mobile-link" onClick={() => setIsMenuOpen(false)}>
+                    <Link href="../ProductPage" className="mobile-link" onClick={() => setIsMenuOpen(false)}>
                     Products
                     </Link>
-                    <Link href="/" className="mobile-link" onClick={() => setIsMenuOpen(false)}>
+                    <Link href="../AboutPage" className="mobile-link" onClick={() => setIsMenuOpen(false)}>
                     About
                     </Link>
-                    <Link href="/" className="mobile-link" onClick={() => setIsMenuOpen(false)}>
+                    <Link href="../ContactPage" className="mobile-link" onClick={() => setIsMenuOpen(false)}>
                     Contact
                     </Link>
                 </div>

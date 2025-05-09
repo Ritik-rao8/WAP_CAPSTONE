@@ -1,7 +1,7 @@
 import "./globals.css"
 
 export const metadata = {
-  title: "LoopCart",
+  title: "NextMart",
   description: "Shop the latest products at affordable prices",
     generator: 'v0.dev'
 }

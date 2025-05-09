@@ -1,0 +1,264 @@
+.hero-section {
+    position: relative;
+    background: linear-gradient(to right, #0a0f2c, #112e72, #2563eb);
+    color: white;
+    padding: 5rem 1rem;
+  }
+  
+  .hero-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  @media (min-width: 768px) {
+    .hero-container {
+      flex-direction: row;
+      align-items: center;
+      padding: 8rem 1rem;
+    }
+  }
+  
+  .hero-content {
+    flex: 1;
+  }
+  
+  .hero-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  @media (min-width: 768px) {
+    .hero-title {
+      font-size: 3rem;
+    }
+  }
+  
+  .hero-subtitle {
+    font-size: 1.125rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+  }
+  
+  .hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .btn {
+    font-size: 1rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .btn-primary {
+    background-color: white;
+    color: #1e3a8a;
+    border: none;
+  }
+  
+  .btn-primary:hover {
+    background-color: #e5e7eb;
+  }
+  
+  .btn-secondary {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+  }
+  
+  .btn-secondary:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  .hero-image-wrapper {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .hero-image {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 0.75rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    object-fit: cover;
+  }
+
+
+
+
+
+
+.features-section {
+    padding: 4rem 1rem;
+    background-color: #f9fafb; 
+  }
+  
+
+  .features-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  
+
+  .features-title {
+    font-size: 1.875rem; 
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  
+
+  .features-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  @media (min-width: 768px) {
+    .features-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .features-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  
+
+  .feature-card {
+    background-color: white;
+    text-align: center;
+    border-radius: 0.75rem;
+    padding: 2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease;
+  }
+  
+  .feature-card:hover {
+    transform: translateY(-5px);
+  }
+  
+
+  .feature-card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+
+  .feature-icon-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+  
+  .feature-icon-circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #e0e7ff; 
+    border: 2px solid #4338ca; 
+    box-shadow: 0 2px 8px rgba(67, 56, 202, 0.2); 
+  }
+  
+
+  .feature-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  
+  .feature-description {
+    color: #6b7280; 
+    font-size: 1rem;
+    max-width: 90%;
+  }
+  
+
+
+
+
+
+
+  .category-section {
+    padding: 4rem 1rem;
+    background-color: #ffffff;
+  }
+  
+  .category-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  
+  .category-title {
+    font-size: 1.875rem; 
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  
+  .category-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  @media (min-width: 768px) {
+    .category-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .category-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  
+  .category-item {
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    background-color: #f9fafb;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .category-image {
+    width: 100%;
+    height: 12rem;
+    object-fit: cover;
+  }
+  
+  .category-button {
+    display: block;
+
+    text-align: center;
+    background-color: #4338ca; 
+    color: white;
+    font-weight: 500;
+    padding: 0.75rem;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .category-button:hover {
+    background-color: #3730a3; 
+  }
+  

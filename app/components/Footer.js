@@ -1,7 +1,7 @@
 "use client"
 import React,{useState} from 'react'
 import '../css/footer.css'
-import { Icon } from '@iconify/react';
+import { FaFacebook,FaInstagram,FaTwitter } from 'react-icons/fa'
 import Link from 'next/link';
 
 export default function footer() {
@@ -30,27 +30,18 @@ export default function footer() {
             </ul>
           </div>
 
-          <div className="footer-section">
-            <h4 className="footer-heading">Categories</h4>
-            <ul className="footer-list">
-              <li><a href="#" className="footer-link">Electronics</a></li>
-              <li><a href="#" className="footer-link">Clothing</a></li>
-              <li><a href="#" className="footer-link">Jewelry</a></li>
-              <li><a href="#" className="footer-link">Home & Kitchen</a></li>
-            </ul>
-          </div>
-
+         
           <div className="footer-section">
             <h4 className="footer-heading">Connect With Us</h4>
             <div className="footer-socials">
               <a href="#" aria-label="Facebook" className="footer-social-link">
-                <Icon icon="logos:facebook" width={24} height={24} />
+                <FaFacebook width={24} height={24} />
               </a>
               <a href="#" aria-label="Twitter" className="footer-social-link">
-                <Icon icon="logos:twitter" width={24} height={24} />
+                <FaTwitter width={24} height={24} />
               </a>
               <a href="#" aria-label="Instagram" className="footer-social-link">
-                <Icon icon="logos:instagram-icon" width={24} height={24} />
+                <FaInstagram width={24} height={24} />
               </a>
             </div>
             <p className="footer-text">
@@ -60,10 +51,10 @@ export default function footer() {
 
         </div>
 
-        <hr className="footer-divider" />
+        <div className="footer-divider" />
 
         <div className="footer-bottom">
-          <p className="footer-text">&copy; {new Date().getFullYear()} ShopNow. All rights reserved.</p>
+          <p className="footer-text">© 2025 NextMart. All rights reserved.</p>
           <div className="footer-bottom-links">
             <a href="#" className="footer-link">Privacy Policy</a>
             <a href="#" className="footer-link">Terms of Service</a>

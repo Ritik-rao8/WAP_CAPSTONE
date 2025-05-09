@@ -1,6 +1,8 @@
 .navbar {
     background-color: white;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1001;
 }
 
 .container {
@@ -9,7 +11,7 @@
     padding: 0 16px;
     padding-top: 16px;
     padding-bottom: 16px;
-    height: 45px;
+    height: 28px;
 }
 
 .navbar-content {
@@ -20,10 +22,11 @@
 
 
 .logo {
-    font-size: 30px; 
+    font-size: 25px; 
     font-weight: bold;
     color: #1F2937; 
     text-decoration: none;
+    margin-bottom: 15px;
 }
 
 .nav-links {
@@ -43,9 +46,10 @@
 
 .nav-link {
     color: #4B5563; 
-    font-size: 16px;
+    font-size: 19px;
     text-decoration: none;
     transition: color 0.3s;
+    margin-bottom: 10px;
 }
 
 .nav-link:hover {
@@ -73,10 +77,13 @@
     border: 2px solid black;
     border-radius: 10px;
     height: 37px;
+
 }
 
 .text{
     font-size: 14px;
+    margin-bottom: 10px;
+    display: inline;
 }
   
 .icon-button:hover {
@@ -93,6 +100,7 @@
     cursor: pointer;
     transition: color 0.3s;
     display: none;
+    margin-bottom: 10px;
 }
   
 .mobile-menu-button:hover {
@@ -101,7 +109,8 @@
   
 .icon {
     height: 20px; 
-    width: 20px;  
+    width: 20px; 
+    
 }
 
 .mobile-menu {
@@ -109,6 +118,16 @@
     margin-top: 12px; 
     padding-bottom: 12px; 
     gap: 12px; 
+
+    position: absolute;
+    top: 70px; /* Adjust this based on your navbar height */
+    left: 0;
+    right: 0;
+    background-color: white;
+    z-index: 1000; /* Make sure it’s above other content */
+    padding: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
 }
 .mobile-menu.open {
     display: block;
@@ -135,6 +154,9 @@
     }
     .mobile-menu-button {
         display: block; 
+    }
+    .text {
+        display: none;
     }
 }
   

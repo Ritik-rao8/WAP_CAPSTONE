@@ -1,33 +1,34 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
 import './AboutStyle.css'
+import Footer from '../components/Footer';
 
 export default function AboutPage() {
 
   const teamMembers = [
     {
-      name: "ABC",
+      name: "Ritik",
       position: "CEO & Founder",
       image: "https://wallpapers.com/images/hd/ironman-hd-ekw7ctu41xabxh04.jpg",
-      bio: "ABC founded NextMart in 2015 with a vision to create an accessible online shopping experience for everyone."
+      bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
     },
     {
-      name: "DEF",
+      name: "Satvik",
       position: "CTO",
       image: "https://wallpapers.com/images/hd/ironman-hd-ekw7ctu41xabxh04.jpg",
-      bio: "DEF oversees all technical aspects of NextMart, ensuring a seamless shopping experience for our customers."
+      bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
     },
     {
-      name: "GHI",
+      name: "Nakul",
       position: "Head of Operations",
       image: "https://wallpapers.com/images/hd/ironman-hd-ekw7ctu41xabxh04.jpg",
-      bio: "GHI manages our day-to-day operations, from inventory management to order fulfillment."
+      bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
     },
     {
-      name: "JKL",
+      name: "Aaryan",
       position: "Marketing Director",
       image: "https://wallpapers.com/images/hd/ironman-hd-ekw7ctu41xabxh04.jpg",
-      bio: "JKL leads our marketing efforts, helping us connect with customers and share our story."
+      bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
     }
   ];
 
@@ -43,26 +44,22 @@ export default function AboutPage() {
       <section className="story-section">
         <div className="story-container">
           <div className="story-image-container">
-            <img
-              
-              alt="Our store"
-              src="./logoo.jpg"
-              className="story-image"
-            />
+            <img alt="Our store" src="./logoo.jpg" className="story-image"/>
           </div>
           <div className="story-text">
             <h2>Our Story</h2>
             <p>
-              ShopNow was founded in 2015 with a simple mission: to make quality products accessible to everyone.
-              What started as a small online store has grown into a trusted e-commerce platform serving thousands of customers worldwide.
+              At <strong>NextMart</strong>, we believe shopping should be simple, reliable, and enjoyable. 
+              Our goal is to create an online destination where quality products, fair prices, and a smooth user experience come together.
             </p>
             <p>
-              Our journey began when our founder, Sarah Johnson, noticed a gap in the market for affordable yet high-quality products.
-              She believed that everyone deserves access to great products without breaking the bank.
+              We curate a wide range of everyday essentials and trending finds across multiple categories, making it easier than ever to discover what you need — or what inspires you — all in one place.
             </p>
             <p>
-              Today, we offer a curated selection of products across multiple categories, all vetted for quality and value.
-              We're proud of how far we've come, but we're even more excited about where we're going.
+            From design to delivery, we're committed to providing a platform that values trust, transparency, and convenience. Every product featured on our site is selected with care, ensuring it meets our standards for both quality and value.
+            </p>
+            <p>
+              Whether you're browsing, buying, or just exploring, we’re here to make the experience as seamless and satisfying as possible. Welcome to the future of shopping.
             </p>
           </div>
         </div>
@@ -81,6 +78,8 @@ export default function AboutPage() {
           ))}
         </div>
       </section>
+
+      <Footer />
 
     </div>
   )

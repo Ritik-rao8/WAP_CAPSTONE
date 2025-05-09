@@ -9,19 +9,19 @@ export default function ContactPage() {
     <div className='contact-wrapper'> 
       <Navbar />
       
-      <div className="contact-page">
-        <section className="contact-section">
-          <div className="contact-container">
-            <h1 className="heading">Contact Us</h1>
-            <p className="description">
-              We'd love to hear from you. Get in touch with our team.
-            </p>
-          </div>
-        </section>
+
+      <section className="contact-section">
+        <div className="contact-container">
+          <h1 className="heading">Contact Us</h1>
+          <p className="description">
+            We'd love to hear from you. Get in touch with our team.
+          </p>
+        </div>
+      </section>
 
         
 
-      </div>
+
     </div>
   )
 }
