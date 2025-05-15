@@ -31,7 +31,7 @@ export default function HomePage() {
       link: "../ProductPage"
     },
     {
-      name: "Jewelry",
+      name: "Jewellery",
       image: "https://www.giva.co/cdn/shop/articles/679-min.jpg?v=1713267383",
       link: "../ProductPage"
     },
@@ -53,33 +53,32 @@ export default function HomePage() {
 
       <section className="hero-section">
         <div className="hero-container">
-          <div className="hero-content">
-            <h1 className="hero-title">Shop the Latest Trends</h1>
-            <p className="hero-subtitle">
-              Discover our curated collection of high-quality products at unbeatable prices.
-            </p>
-            <div className="hero-buttons">
-              <Link href="../ProductPage">
-                <button className="btn btn-primary">
-                  Next Mart <span className="arrow-icon">→</span>
-                </button>
-              </Link>
-              <Link href="../AboutPage">
-                <button className="btn btn-secondary">
-                  Learn More
-                </button>
-              </Link>
+          <div className="hero-grid">
+            <div className="hero-content">
+              <h1 className="hero-title">Discover Amazing Products at NextMart</h1>
+              <p className="hero-subtitle">
+                Discover our curated collection of high-quality products at unbeatable prices.Enjoy free shipping on all orders over $50.
+              </p>
+              <div className="hero-buttons">
+                <Link href="../ProductPage">
+                  <button className="btn btn-primary">
+                    Next Mart <span className="arrow-icon">→</span>
+                  </button>
+                </Link>
+                <Link href="../AboutPage">
+                  <button className="btn btn-secondary">
+                    Learn More
+                  </button>
+                </Link>
+              </div>
             </div>
-          </div>
-          <div className="hero-image-wrapper">
-            <img
-              className="hero-image"
-              src="https://sdmntprwestus2.oaiusercontent.com/files/00000000-abe0-61f8-b2d8-47be9776b111/raw?se=2025-05-08T12%3A23%3A17Z&sp=r&sv=2024-08-04&sr=b&scid=00000000-0000-0000-0000-000000000000&skoid=30ec2761-8f41-44db-b282-7a0f8809659b&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-05-08T10%3A23%3A05Z&ske=2025-05-09T10%3A23%3A05Z&sks=b&skv=2024-08-04&sig=Z7TJchPgbFz7fLRVTQ9nF8PsJCuy6FalubUo/yuARvU%3D"
-              alt="Hero shopping image"
-            />
+            <div className="hero-image-wrapper">
+              <img className="hero-image" src="https://images.pexels.com/photos/5632402/pexels-photo-5632402.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Hero shopping image"/>
+            </div>
           </div>
         </div>
       </section>
+      
 
       <section className="features-section">
         <div className="features-container">
@@ -116,6 +115,23 @@ export default function HomePage() {
                 </Link>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="newsletter-section">
+        <div className="newsletter-container">
+          <h2 className="newsletter-title">Join Our Newsletter</h2>
+          <p className="newsletter-description">
+            Subscribe to our newsletter to receive updates on new products, special offers, and exclusive discounts.
+          </p>
+          <div className="newsletter-form">
+            <input 
+              type="email" 
+              placeholder="Enter your email" 
+              className="newsletter-input"
+            />
+            <button className="newsletter-button">Subscribe</button>
           </div>
         </div>
       </section>

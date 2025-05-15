@@ -65,6 +65,29 @@ export default function AboutPage() {
         </div>
       </section>
 
+      <section className="stats-section">
+        <div className="stats-container">
+          <div className="stats-grid">
+            <div className="stat-item">
+              <div className="stat-value">1M+</div>
+              <div className="stat-label">Happy Customers</div>
+            </div>
+            <div className="stat-item">
+              <div className="stat-value">50K+</div>
+              <div className="stat-label">Products</div>
+            </div>
+            <div className="stat-item">
+              <div className="stat-value">100+</div>
+              <div className="stat-label">Countries Served</div>
+            </div>
+            <div className="stat-item">
+              <div className="stat-value">24/7</div>
+              <div className="stat-label">Support</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="team-section">
         <h2 className="section-title">Meet Our Team</h2>
         <div className="team-grid">

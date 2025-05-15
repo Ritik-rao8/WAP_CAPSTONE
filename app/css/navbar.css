@@ -135,6 +135,7 @@
   
 .mobile-link {
     display: block;
+    margin-top: 20px;
     color: #4B5563; 
     text-decoration: none;
     transition: color 0.3s;
