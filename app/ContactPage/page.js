@@ -1,142 +1,136 @@
-"use client"
-import React,{useState} from 'react'
-import Navbar from '../components/Navbar'
-import './ContactStyle.css'
-import { MapPin, Phone, Mail, MessageSquare } from 'lucide-react';
-
+"use client";
+import React, { useState } from "react";
+import Navbar from "../components/Navbar";
+import "./ContactStyle.css";
+import Footer from "../components/Footer";
+// import { MapPin, Phone, Mail, MessageSquare } from "lucide-react";
 
 export default function ContactPage() {
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = React.useState({
     name: '',
     email: '',
     subject: '',
     message: ''
   });
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log('Form submitted:', formData);
-    // Handle form submission logic
-  };
-  return (
-    <div className='contact-wrapper'> 
-      <Navbar />
-      
 
-      <section className="contact-section">
-        <div className="contact-container">
-          <h1 className="contact-heading">Contact Us</h1>
-          <p className="description">
+  const [isSubmitting, setIsSubmitting] = React.useState(false);
+  const [isSubmitted, setIsSubmitted] = React.useState(false);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  return (
+    <div className="contact-wrapper">
+      <Navbar />
+
+      <section className="contact-banner">
+        <div className="banner-container">
+          <h1 className="banner-heading">Contact Us</h1>
+          <p className="banner-description">
             We'd love to hear from you. Get in touch with our team.
           </p>
         </div>
       </section>
 
-      <section className='contact-form-conatiner'>
-        <div className='contact-form-section'>
-          <div className="card">
-            <h2 className="card-title">Send us a Message</h2>
-            <form onSubmit={handleSubmit} className="form">
-              <div className="form-group">
-                <label htmlFor="name">Your Name</label>
-                <input
-                  type="text"
-                  id="name"
-                  value={formData.name}
-                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  required
-                />
-              </div>
+      <section className="contact-section">
+        <div className="contact-container">
+          <div className="contact-flex">
+            {/* Contact Form */}
+            <div className="contact-form-wrapper">
+              <div className="custom-card">
+                <div className="custom-card-body">
+                  <h2 className="form-title">Send Us a Message</h2>
 
-              <div className="form-group">
-                <label htmlFor="email">Email Address</label>
-                <input
-                  type="email"
-                  id="email"
-                  value={formData.email}
-                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  required
-                />
-              </div>
-
-              <div className="form-group">
-                <label htmlFor="subject">Subject</label>
-                <input
-                  type="text"
-                  id="subject"
-                  value={formData.subject}
-                  onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
-                  required
-                />
-              </div>
-
-              <div className="form-group">
-                <label htmlFor="message">Message</label>
-                <textarea
-                  id="message"
-                  rows="4"
-                  value={formData.message}
-                  onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  required
-                ></textarea>
-              </div>
-
-              <button type="submit" className="btn-primary">Send Message</button>
-            </form>
-          </div>
-        </div>
-
-
-        <div className="info-section">
-          <div className="card">
-            <h2 className="card-title">Contact Information</h2>
-            <div className="info-group">
-              <div className="info-item">
-                <MapPin className="icon" />
-                <div>
-                  <h3>Our Location</h3>
-                  <p>123 Commerce Street<br />Shopping City, SC 12345<br />United States</p>
-                </div>
-              </div>
-
-              <div className="info-item">
-                <Phone className="icon" />
-                <div>
-                  <h3>Phone</h3>
-                  <p>Toll-free: (800) 123-4567<br />Fax: (800) 123-4568</p>
-                </div>
-              </div>
-
-              <div className="info-item">
-                <Mail className="icon" />
-                <div>
-                  <h3>Email</h3>
-                  <p>support@nextmart.com<br />sales@nextmart.com</p>
-                </div>
-              </div>
-
-              <div className="info-item">
-                <MessageSquare className="icon" />
-                <div>
-                  <h3>Live Chat</h3>
-                  <p>Our live chat is available<br />24/7 for urgent inquiries</p>
+                  {isSubmitted && (
+                    <div className="submission-success">
+                      {/* <Icon icon="lucide:check-circle" /> */}
+                      <span>Thank you! Your message has been sent successfully.</span>
+                    </div>
+                  )}
+                  <form>
+                  {/* <form onSubmit={handleSubmit}> */}
+                    <div className="form-grid">
+                      <input
+                        type="text"
+                        label="Full Name"
+                        name="name"
+                        value={formData.name}
+                        // onChange={handleChange}
+                        placeholder="Enter your full name"
+                        isRequired
+                      />
+                      <input
+                        type="email"
+                        label="Email Address"
+                        name="email"
+                        value={formData.email}
+                        // onChange={handleChange}
+                        placeholder="Enter your email address"
+                        isRequired
+                      />
+                    </div>
+                    <div className="form-field">
+                      <input
+                        type="text"
+                        label="Subject"
+                        name="subject"
+                        value={formData.subject}
+                        // onChange={handleChange}
+                        placeholder="What is this regarding?"
+                        isRequired
+                      />
+                    </div>
+                    <div className="form-field">
+                      <textarea
+                        label="Message"
+                        name="message"
+                        value={formData.message}
+                        // onChange={handleChange}
+                        placeholder="Type your message here..."
+                        minRows={4}
+                        isRequired
+                      />
+                    </div>
+                    <button 
+                      type="submit" 
+                      color="primary" 
+                      className="submit-button"
+                      // isLoading={isSubmitting}
+                    >
+                      {/* {isSubmitting ? 'Sending...' : 'Send Message'} */}
+                    </button>
+                  </form>
                 </div>
               </div>
             </div>
           </div>
-
-
-          
         </div>
-
+      </section>
+      {/* map-section */}
+      <section class="map-section">
+        <div class="map-container">
+          <div class="map-placeholder">
           
-
-
-        
+            <div class="map-content">
+              <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3490.1503215831754!2d77.0875463761463!3d28.98291626808207!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390db15c164f0a91%3A0xcab7be79bc1b3bac!2sNewton%20School%20of%20Technology%2C%20Delhi%20NCR!5e0!3m2!1sen!2sin!4v1746383558536!5m2!1sen!2sin" width="100%" height="100%"
+            />
+            </div>
+          </div>
+        </div>
       </section>
 
-        
+      <Footer />
+
+
+
 
 
     </div>
-  )
+  );
 }
