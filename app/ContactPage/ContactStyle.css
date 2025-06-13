@@ -63,7 +63,7 @@
 
 @media (min-width: 1024px) {
   .contact-form-wrapper {
-    width: 66.6667%;
+    width: 65%;
   }
 }
 
@@ -108,12 +108,31 @@
   }
 }
 
+.form-grid-item{
+  background-color: #eceaea9c;
+  border: none;
+  border-radius: 15px;
+  height: 20px;
+  text-align: start;
+  padding: 1rem;
+
+}
+.form-field-item {
+  width: 95%;
+}
+
 .form-field {
   margin-bottom: 1.5rem;
 }
 
 .submit-button {
   width: 100%;
+  background-color: #3b82f6;
+  border: none;
+  border-radius: 15px;
+  height: 40px;
+  color: white;
+  text-align: center;
 }
 
 @media (min-width: 768px) {
@@ -155,8 +174,8 @@
 .icon-wrapper {
   padding: 0.75rem;
   border-radius: 9999px;
-  background-color: #e0f2fe; /* fallback for bg-primary-100 */
-  color: #0284c7; /* fallback for text-primary */
+  background-color: #e0f2fe; 
+  color: #0284c7; 
   display: flex;
   align-items: center;
   justify-content: center;
@@ -168,10 +187,9 @@
 }
 
 .info-item-details {
-  color: #6b7280; /* fallback for text-default-500 */
+  color: #6b7280; 
+
 }
-
-
 
 /* map section */
 
@@ -188,7 +206,7 @@
 }
 
 .map-placeholder {
-  background-color: #e5e7eb; /* gray-200 */
+  background-color: #e5e7eb; 
   height: 20rem;
   border-radius: 0.5rem;
   overflow: hidden;
@@ -200,7 +218,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #d1d5db; /* gray-300 */
+  background-color: #d1d5db;
 }
 
 
@@ -208,7 +226,7 @@
 
 .newsletter-section {
   padding: 4rem 0;
-  background-color: #f0f9ff; /* equivalent to Tailwind's bg-primary-50 */
+  background-color: #f0f9ff; 
   text-align: center;
 }
 
@@ -219,13 +237,13 @@
 }
 
 .newsletter-title {
-  font-size: 1.875rem; /* text-3xl */
+  font-size: 1.875rem;
   font-weight: bold;
   margin-bottom: 1rem;
 }
 
 .newsletter-description {
-  color: #6b7280; /* text-default-500 */
+  color: #6b7280; 
   max-width: 560px;
   margin: 0 auto 2rem auto;
 }
@@ -247,20 +265,20 @@
 
 .newsletter-input {
   padding: 0.5rem 1rem;
-  border: 1px solid #d1d5db; /* border-gray-300 */
+  border: 1px solid #d1d5db; 
   border-radius: 0.5rem;
   flex-grow: 1;
   outline: none;
 }
 
 .newsletter-input:focus {
-  box-shadow: 0 0 0 2px #3b82f6; /* ring-primary */
+  box-shadow: 0 0 0 2px #3b82f6; 
   border-color: #3b82f6;
 }
 
 .newsletter-button {
   padding: 0.5rem 1.5rem;
-  background-color: #3b82f6; /* primary color */
+  background-color: #3b82f6; 
   color: white;
   border: none;
   border-radius: 0.5rem;

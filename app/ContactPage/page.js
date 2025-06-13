@@ -25,19 +25,37 @@ export default function ContactPage() {
   const handleSubmit = (e) => {
     e.preventDefault();                                                                   
     setIsSubmitting(true);
+
+
+    setTimeout(() => {
+      console.log('Form submitted:', formData);
+      setIsSubmitting(false);
+      setIsSubmitted(true);
+      setFormData({
+        name: '',
+        email: '',
+        subject: '',
+        message: ''
+      });
+      
+      // Reset success message after 5 seconds
+      setTimeout(() => {
+        setIsSubmitted(false);
+      }, 5000);
+    }, 1500);
   }
   const contactInfo = [
     {
       title: "Address",
-      details: "123 Shopping Avenue, Retail District, NY 10001"
+      details: "NH44, Chowk, Bahalgarh, Sonipat, Haryana 131021"
     },
     {
       title: "Phone",
-      details: "+1 (555) 123-4567"
+      details: "+91 930XXXXXXXX"
     },
     {
       title: "Email",
-      details: "support@shopnow.example"
+      details: "support.nextmart@gmail.com"
     },
     {
       title: "Business Hours",
@@ -69,7 +87,6 @@ export default function ContactPage() {
 
                   {isSubmitted && (
                     <div className="submission-success">
-                      {/* <Icon icon="lucide:check-circle" /> */}
                       <span>Thank you! Your message has been sent successfully.</span>
                     </div>
                   )}
@@ -78,6 +95,7 @@ export default function ContactPage() {
                     <div className="form-grid">
                       <input
                         type="text"
+                        className="form-grid-item"
                         label="Full Name"
                         name="name"
                         value={formData.name}
@@ -87,6 +105,7 @@ export default function ContactPage() {
                       />
                       <input
                         type="email"
+                        className="form-grid-item"
                         label="Email Address"
                         name="email"
                         value={formData.email}
@@ -97,6 +116,7 @@ export default function ContactPage() {
                     </div>
                     <div className="form-field">
                       <input
+                      className="form-field-item form-grid-item"
                         type="text"
                         label="Subject"
                         name="subject"
@@ -108,6 +128,7 @@ export default function ContactPage() {
                     </div>
                     <div className="form-field">
                       <textarea
+                        className="form-field-item form-grid-item"
                         label="Message"
                         name="message"
                         value={formData.message}
@@ -121,7 +142,7 @@ export default function ContactPage() {
                       type="submit" 
                       color="primary" 
                       className="submit-button"
-                      // isLoading={isSubmitting}
+                      isLoading={isSubmitting}
                     >
                       {isSubmitting ? 'Sending...' : 'Send Message'}
                     </button>

@@ -1,6 +1,7 @@
 "use client"
 import React, { useState, useEffect } from "react"
 import Navbar from '../components/Navbar'
+import Footer from '../components/Footer'
 import "./ProductStyle.css"
 import Link from "next/link";
 
@@ -197,6 +198,8 @@ export default function ProductPage() {
 
         </div>
       </section>
+      
+      <Footer />
 
       
 
