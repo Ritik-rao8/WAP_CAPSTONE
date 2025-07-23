@@ -33,7 +33,14 @@ export default function Navbar() {
                             <p className="text">Shop Now</p>
                         </button>
                     </Link>
+                    
+                    <Link href="../Loginpage" className='nav-link'>
+                        <button className="icon-button">Login
+                        </button>
+                    </Link>
                 </div>
+               
+
 
             </div>
 

@@ -12,6 +12,7 @@ export default function ProductPage() {
   const [products, setProducts] = React.useState([]);
   const [currentPage, setCurrentPage] = React.useState(1);
   const [sortBy, setSortBy] = React.useState('default');
+  const [error, setError] = React.useState(null);
 
   const productsPerPage = 12;
   const categories = ['all', 'electronics', 'jewelery', "men's clothing", "women's clothing"];
@@ -175,9 +176,9 @@ export default function ProductPage() {
                       <p className="product-price">${product.price.toFixed(2)}</p>
                     </div>
                     <div className="card-footer">
-                      <Link href={`/products/${product.id}`} className="view-button">
+                      <div className="view-button">
                         View Details
-                      </Link>
+                      </div>
                     </div>
                   </div>
                 ))}
@@ -200,8 +201,6 @@ export default function ProductPage() {
       </section>
       
       <Footer />
-
-      
 
     </div>
   )
