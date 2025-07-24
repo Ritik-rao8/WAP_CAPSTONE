@@ -7,18 +7,22 @@ import { FaShoppingCart } from "react-icons/fa";
 export default function HomePage() {
   const features = [
     {
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSM-gJX2Gs3ZLPnUT2QRvgeWdElM_vxB-1sQA&s",
       title: "Free Shipping",
       description: "Free shipping on all orders over $50"
     },
     {
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqKUkJwUSLUTKUuemQxK2QjpLVUXQFaZoIAg&s",
       title: "Easy Returns",
       description: "30-day return policy for all items"
     },
     {
+      image: "https://static.vecteezy.com/system/resources/previews/027/381/364/non_2x/discount-icon-percentage-icon-shopping-tags-outline-black-discount-label-pricing-tag-retail-related-badges-special-offer-symbol-sale-sign-business-and-finance-design-elements-vector.jpg",
       title: "Best Prices",
       description: "Competitive prices on all our products"
     },
     {
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2_BW0etRdTaO3FlVkodibktKm83W6jc5j1w&s",
       title: "24/7 Support",
       description: "Customer support available around the clock"
     }
@@ -88,7 +92,8 @@ export default function HomePage() {
               <div className="feature-card" key={index}>
                 <div className="feature-card-body">
                   <div className="feature-icon-wrapper">
-                    <div className="feature-icon-circle" />
+                    <img  src={feature.image} className="feature-icon-circle" />
+                    
                   </div>
                   <h3 className="feature-title">{feature.title}</h3>
                   <p className="feature-description">{feature.description}</p>

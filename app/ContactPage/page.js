@@ -101,7 +101,7 @@ export default function ContactPage() {
                         value={formData.name}
                         onChange={handleChange}
                         placeholder="Enter your full name"
-                        isrequired
+                        isrequired="true" 
                       />
                       <input
                         type="email"
@@ -111,7 +111,7 @@ export default function ContactPage() {
                         value={formData.email}
                         onChange={handleChange}
                         placeholder="Enter your email address"
-                        isrequired
+                        isrequired="true" 
                       />
                     </div>
                     <div className="form-field">
@@ -123,7 +123,7 @@ export default function ContactPage() {
                         value={formData.subject}
                         onChange={handleChange}
                         placeholder="What is this regarding?"
-                        isrequired
+                        isrequired="true" 
                       />
                     </div>
                     <div className="form-field">
@@ -134,15 +134,15 @@ export default function ContactPage() {
                         value={formData.message}
                         onChange={handleChange}
                         placeholder="Type your message here..."
-                        minRows={4}
-                        isrequired
+                        minrows={4}
+                        isrequired="true" 
                       />
                     </div>
                     <button 
                       type="submit" 
                       color="primary" 
                       className="submit-button"
-                      isLoading={isSubmitting}
+                      isloading="false"
                     >
                       {isSubmitting ? 'Sending...' : 'Send Message'}
                     </button>
@@ -171,11 +171,11 @@ export default function ContactPage() {
         </div>
       </section>
       {/* map-section */}
-      <section class="map-section">
-        <div class="map-container">
-          <div class="map-placeholder">
+      <section className="map-section">
+        <div className="map-container">
+          <div className="map-placeholder">
           
-            <div class="map-content">
+            <div className="map-content">
               <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3490.1503215831754!2d77.0875463761463!3d28.98291626808207!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390db15c164f0a91%3A0xcab7be79bc1b3bac!2sNewton%20School%20of%20Technology%2C%20Delhi%20NCR!5e0!3m2!1sen!2sin!4v1746383558536!5m2!1sen!2sin" width="100%" height="100%"
             />

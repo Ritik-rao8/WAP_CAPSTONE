@@ -10,25 +10,25 @@ export default function AboutPage() {
       name: "Ritik",
       position: "CEO & Founder",
       image: "https://imgs.search.brave.com/mG9gLgo1PQFL0-dx_bHpRnOKkvkkQkxGC96JqsfhQbU/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly93MC5w/ZWFrcHguY29tL3dh/bGxwYXBlci8yMy81/MDkvSEQtd2FsbHBh/cGVyLWNhcHRhaW4t/YW1lcmljYS1hbWVy/aWNhLWF2ZW5nZXJz/LWNhcHRhaW4tY2Fw/dGFpbi1yb2dlci1j/YXB0YWluLXJvZ2Vy/cy1oeWRyYS1tYXJ2/ZWwtc2hlaWxkLXN0/ZXZlLXJvZ2VyLXRo/dW1ibmFpbC5qcGc",
-      bio: "Ritik founded NextMart in 2025 with a vision to create an accessible online shopping experience for everyone."
+      bio: "Ritik founded NextMart in 2025 to make online shopping accessible for all."
     },
     {
       name: "Satvik",
       position: "CTO",
       image: "https://imgs.search.brave.com/PE7_jOKbQ5C57L7m_f0kqwfCCBgeXwKOGo8jJrAIfc0/rs:fit:860:0:0:0/g:ce/aHR0cDovL20uZ2V0/dHl3YWxscGFwZXJz/LmNvbS93cC1jb250/ZW50L3VwbG9hZHMv/MjAyMy8wNi9CYXRt/YW4tRHAuanBn",
-      bio: "Satvik oversees all technical aspects of NextMart, ensuring a seamless shopping experience for our customers."
+      bio: "Satvik leads tech at NextMart, ensuring a smooth shopping experience."
     },
     {
       name: "Nakul",
       position: "Head of Operations",
       image: "https://imgs.search.brave.com/EU4aesydWd-cTJrYYpDO6TJrgPuFpQ3KWSG4HV1FwIE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93MC5w/ZWFrcHguY29tL3dh/bGxwYXBlci85OTMv/MjA3L0hELXdhbGxw/YXBlci10b255LXN0/YXJrLWlyb24tbWFu/LWlyb24tbWFuLXRv/bnktc3RhcmstdGh1/bWJuYWlsLmpwZw",
-      bio: "Nakul manages our day-to-day operations, from inventory management to order fulfillment."
+      bio: "Nakul handles daily operations, from inventory to order fulfillment."
     },
     {
       name: "Aaryan",
       position: "Marketing Director",
       image: "https://imgs.search.brave.com/cs6nLpcnBRs9k-pJudWSaG3KlSvU9NnPxweS27aEiYw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9kcGVt/b2ppLmNvbS93cC1j/b250ZW50L3VwbG9h/ZHMvMjAyMy8wMi9T/cGlkZXJtYW4tRFAt/NC5wbmc",
-      bio: "Aaryan leads our marketing efforts, helping us connect with customers and share our story.."
+      bio: "Aaryan drives marketing, connecting us with customers and sharing our story."
     }
   ];
 

@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react"
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import "./ProductStyle.css"
-import Link from "next/link";
+
 
 export default function ProductPage() {
   const [selectedCategory, setSelectedCategory] = React.useState('all');
@@ -94,9 +94,6 @@ export default function ProductPage() {
    const renderRating = (rating) => {
     return (
       <div className="flex items-center gap-1">
-        {/* <span className="text-warning">
-          <Icon icon="lucide:star" className="fill-current" />
-        </span> */}
         <span className="text-sm">{rating.toFixed(1)}</span>
       </div>
     );
@@ -187,7 +184,7 @@ export default function ProductPage() {
                 <div className="pagination-wrapper">
                   <div
                     total={totalPages}
-                    initialPage={currentPage}
+                    initialpage={currentPage}
                     onChange={setCurrentPage}
                   />
                 </div>

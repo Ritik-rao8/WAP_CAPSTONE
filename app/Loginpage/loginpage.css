@@ -9,7 +9,7 @@
   
   .login-title {
     font-size: 2.5rem;
-    color: #0047ab;
+    color: #0a54bb;
     margin-bottom: 30px;
     text-align: center;
   }
@@ -54,7 +54,7 @@
     width: 100%;
     padding: 12px;
     font-size: 1.2rem;
-    background-color: #0047ab;
+    background-color:#3877ca;
     color: white;
     border: none;
     border-radius: 8px;
@@ -63,7 +63,7 @@
   }
   
   .login-button:hover {
-    background-color: #003580;
+    background-color: #1a0ec3; 
     transform: scale(1.02);
   }
   
@@ -83,3 +83,14 @@
   .login-footer a:hover {
     text-decoration: underline;
   }
+  .name-group {
+    display: flex;
+    gap: 2rem;
+  }
+  
+  .name-field {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  

@@ -1,5 +1,5 @@
 .hero-section {
-  background: linear-gradient(to right, #0a0f2c, #112e72, #2563eb);
+  background: linear-gradient(to right, #e0e7ff, #f8fafc, #e0f2fe);
   color: white;
   padding: 5rem 1rem;
   text-align: center;
@@ -9,6 +9,7 @@
   font-size: 2.5rem;
   font-weight: bold;
   margin-bottom: 1rem;
+  color: #1e293b;
 }
   
 .hero-section p {
@@ -16,6 +17,7 @@
   opacity: 0.9;
   max-width: 40rem;
   margin: 0 auto 2rem;
+  color: 	#475569;
 }
 
 

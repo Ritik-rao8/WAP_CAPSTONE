@@ -3,19 +3,21 @@
 import React, { useState } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import Link from 'next/link';
 import "../Loginpage/loginpage.css";
 
 export default function SignupPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+
 
   const handleSignup = (e) => {
     e.preventDefault();
   
     // Validate form inputs
-    if (!email || !password || !confirmPassword) {
+    if (!firstName || !lastName || !email || !password || !confirmPassword) {
       alert("All fields are required!");
       return;
     }
@@ -25,13 +27,16 @@ export default function SignupPage() {
       return;
     }
   
-    // Save user credentials locally (simulated signup)
-    const newUser = { email, password };
+
+    const newUser = {  firstName, lastName,email, password };
     localStorage.setItem("user", JSON.stringify(newUser)); // Store user in localStorage
     alert("Signup successful!");
     setEmail("");
     setPassword("");
     setConfirmPassword("");
+    setFirstName("");
+    setLastName("");
+
   };
   
   return (
@@ -40,6 +45,32 @@ export default function SignupPage() {
       <div className="login-container">
         <h1 className="login-title">Sign Up</h1>
         <form className="login-form" onSubmit={handleSignup}>
+          <div className="form-group name-group">
+            <div className="name-field">
+              <label>First Name</label>
+              <input
+                type="text"
+                id="firstName"
+                value={firstName}
+                onChange={(e) => setFirstName(e.target.value)}
+                placeholder="First name"
+                required
+              />
+            </div>
+            <div className="name-field">
+              <label>Last Name</label>
+              <input
+                type="text"
+                id="lastName"
+                value={lastName}
+                onChange={(e) => setLastName(e.target.value)}
+                placeholder="Last name"
+                required
+              />
+            </div>
+          </div>
+
+
           <div className="form-group">
             <label>Email</label>
             <input
@@ -78,6 +109,7 @@ export default function SignupPage() {
           </button>
         </form>
       </div>
+      <Footer />
     </div>
   );
 }
